@@ -11,10 +11,7 @@ class Solution:
         for num in range(3,n,2):
             if num not in nonprimes:
                 primes += 1
-                value = num * 3
-                while value < n:
-                    nonprimes.add(value)
-                    value += num * 2
+                nonprimes.update(range(num*3,n,num*2))
                 
         
         return primes
