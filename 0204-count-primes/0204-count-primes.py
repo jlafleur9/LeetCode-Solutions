@@ -5,8 +5,6 @@ class Solution:
         if n == 0 or n == 1 or n == 2:
             return primes
         
-        nonprimes = set()
-        
         if n == 3:
             primes += 1
             return primes
@@ -14,11 +12,8 @@ class Solution:
         #add 2 to primes and eliminate all even numbers. 
         if n > 3:
             primes += 1
-            value = 4
-            nonprimes.add(value)
-            while value < n:
-                value += 2
-                nonprimes.add(value)
+            
+        nonprimes = set()
         
         for num in range(3,n):
             if num % 2 == 0:  
