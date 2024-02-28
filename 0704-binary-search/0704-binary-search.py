@@ -4,10 +4,6 @@ class Solution:
         left = 0
         right = len(nums) - 1
         
-        if right == 0:
-            if target == nums[0]:
-                return 0
-        
         while left <= right:
             mid = (left+right) // 2
             if nums[mid] == target:
