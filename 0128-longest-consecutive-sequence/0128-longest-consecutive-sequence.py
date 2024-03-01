@@ -1,6 +1,6 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        elements = set()
+        elements = set(nums)
         maxSequence = 1
         currentSequence = 1
         isSequence = True
@@ -8,9 +8,6 @@ class Solution:
         if not nums:
             return 0
         
-        for i in nums:
-            elements.add(i)
-            
         for i in nums:
             isStart = i -1
             if isStart in elements:
