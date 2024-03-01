@@ -10,7 +10,6 @@ class Solution:
         for i in range(n - 2, -1, -1):
             right[i] = right[i + 1] * nums[i + 1]
         
-        # Multiply the corresponding elements of left and right lists to get the result
         result = [left[i] * right[i] for i in range(n)]
         
         return result
