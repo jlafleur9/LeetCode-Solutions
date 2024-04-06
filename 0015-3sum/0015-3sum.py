@@ -3,7 +3,6 @@ class Solution:
         numsMap = {}
         result = set()
         n = len(nums)
-        z = []
         
         for index, value in enumerate(nums):
             numsMap[value] = index
