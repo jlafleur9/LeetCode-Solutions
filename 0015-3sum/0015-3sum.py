@@ -1,21 +1,25 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        numsMap = {}
-        result = set()
-        n = len(nums)
+        result = []
+        nums.sort()
         
         for index, value in enumerate(nums):
-            numsMap[value] = index
-        
-        if nums.count(0) == len(nums):
-            result.add((0,0,0))
-            return result
+            if index > 0 and value == nums[index-1]:
+                continue
+                
+            left = index + 1
+            right = len(nums) - 1
             
-        for i in range(n):
-            for j in range(i+1, n):
-                target = -nums[i] - nums[j]
-                if target in numsMap and numsMap[target] != i and numsMap[target] != j:
-                    result.add(tuple(sorted([nums[i], nums[j], target])))
-
-                    
+            while left < right:
+                currentValue = value + nums[left] + nums[right]
+                if currentValue > 0:
+                    right -= 1
+                elif currentValue < 0:
+                    left += 1
+                else:
+                    result.append([value, nums[left], nums[right]])
+                    right -= 1
+                    while nums[right] == nums[right + 1] and right > left:
+                        right -= 1
         return result
+        
