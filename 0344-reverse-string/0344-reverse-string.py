@@ -8,7 +8,6 @@ class Solution:
         
         while left < right:
             tempLeft = s[left]
-            tempRight = s[right]
             
             s[left] = s[right]
             s[right] = tempLeft
