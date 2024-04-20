@@ -17,8 +17,6 @@ class Solution:
                 bottom = row - 1
             else:
                 break
-                
-        print(top, bottom)
         
         if not(top <= bottom):
             return False
