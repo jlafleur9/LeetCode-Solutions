@@ -8,12 +8,11 @@ class Solution:
             mid = (left+right) // 2
             if nums[mid] == target:
                 return mid
-            
             if target < nums[mid]:
                 right = mid - 1
-                mid = (left + right) // 2
+                #mid = (left + right) // 2
             else:
                 left = mid + 1
-                mid = (left + right) // 2
+                #mid = (left + right) // 2
                 
         return -1
