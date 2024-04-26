@@ -13,7 +13,6 @@ class Solution:
             else:
                 stack.append(int(item))
                 
-        print(stack)
                 
         for num in stack:
             total += num
