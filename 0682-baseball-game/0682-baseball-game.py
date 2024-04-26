@@ -12,9 +12,5 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(int(item))
-                
-                
-        for num in stack:
-            total += num
             
-        return total
+        return sum(stack)
