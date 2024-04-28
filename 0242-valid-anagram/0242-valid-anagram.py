@@ -36,7 +36,7 @@ class Solution:
         
         
         
-        char_map = {}
+        char_map2 = {}
 
         if len(s) != len(t):
             return False
