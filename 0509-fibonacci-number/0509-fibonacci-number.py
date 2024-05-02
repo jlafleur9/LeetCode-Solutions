@@ -1,3 +1,5 @@
+##This is a recursive solution, recursion is not optimal to solve this problem but was done for learning two branch recursion. 
+
 class Solution:
     def fib(self, n: int) -> int:
         if n == 0:
