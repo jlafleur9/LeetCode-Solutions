@@ -1,11 +1,6 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
         cycle = set()
-        
-        if n == 1:
-            return True
-        
-        
             
         while n not in cycle:
             cycle.add(n)
