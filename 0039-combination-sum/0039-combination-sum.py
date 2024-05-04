@@ -3,20 +3,20 @@ class Solution:
         result = []
         curr = []
         
-        def dfs(i):
+        def dfs(i, count):
             if i >= len(candidates):
                 return
-            if sum(curr) == target:
+            if count == target:
                 result.append(curr.copy())
                 return
-            if sum(curr) > target:
+            if count > target:
                 return
             
             curr.append(candidates[i])
-            dfs(i)
+            dfs(i, count + candidates[i])
             curr.pop()
-            dfs(i + 1)
+            dfs(i + 1, count)
         
-        dfs(0)
+        dfs(0, 0)
         return result
             
